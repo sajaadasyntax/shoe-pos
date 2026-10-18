@@ -12,7 +12,6 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "android": {
-      "supportsRTL": true,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -24,6 +23,7 @@
     },
     "plugins": [
       "expo-router",
+      "./plugins/withAndroidRtl",
       "expo-sqlite",
       "expo-secure-store",
       [

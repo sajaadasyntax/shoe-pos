@@ -396,7 +396,7 @@ const translations: Record<string, string> = {
   '1': '١',
 };
 
-const errorPatterns: Array<[RegExp, (...matches: string[]) => string]> = [
+const errorPatterns: [RegExp, (...matches: string[]) => string][] = [
   [/^Recorded by (.+)$/, (name) => `سُجّل بواسطة ${name}`],
   [/^Paid from account · (.+)$/, (amount) => `دُفع من الحساب · ${amount}`],
   [/^Paid from (.+)$/, (account) => `دُفع من ${account}`],
