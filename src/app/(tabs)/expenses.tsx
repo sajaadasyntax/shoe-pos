@@ -10,6 +10,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput, formatArabicDateTime } from '../../components/ArabicUI';
 import { useFocusEffect } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { ReceiptField } from '../../components/ReceiptField';

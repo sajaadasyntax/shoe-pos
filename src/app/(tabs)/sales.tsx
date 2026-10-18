@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
-import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text } from '../../components/ArabicUI';
 import { useFocusEffect } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { formatAmount, getSales, type Sale } from '../../lib/database';

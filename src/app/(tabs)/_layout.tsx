@@ -1,5 +1,5 @@
 import { Redirect, Tabs } from 'expo-router';
-import { Text } from 'react-native';
+import { ArabicText as Text, arabicText } from '../../components/ArabicUI';
 import { useAuth } from '../../providers/AuthProvider';
 import { useActivation } from '../../providers/ActivationProvider';
 
@@ -37,18 +37,18 @@ export default function TabLayout() {
         },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Inventory', tabBarLabel: tabLabel('Inventory') }} />
-      <Tabs.Screen name="sales" options={{ title: 'Sales', tabBarLabel: tabLabel('Sales') }} />
-      <Tabs.Screen name="expenses" options={{ title: 'Expenses', tabBarLabel: tabLabel('Expenses') }} />
+      <Tabs.Screen name="index" options={{ title: arabicText('Inventory'), tabBarLabel: tabLabel('Inventory') }} />
+      <Tabs.Screen name="sales" options={{ title: arabicText('Sales'), tabBarLabel: tabLabel('Sales') }} />
+      <Tabs.Screen name="expenses" options={{ title: arabicText('Expenses'), tabBarLabel: tabLabel('Expenses') }} />
       <Tabs.Screen
         name="users"
         options={{
-          title: 'User management',
+          title: arabicText('User management'),
           tabBarLabel: tabLabel('Users'),
           href: user?.role === 'admin' ? undefined : null,
         }}
       />
-      <Tabs.Screen name="more" options={{ title: 'More', tabBarLabel: tabLabel('More') }} />
+      <Tabs.Screen name="more" options={{ title: arabicText('More'), tabBarLabel: tabLabel('More') }} />
       <Tabs.Screen name="reports" options={{ href: null }} />
       <Tabs.Screen name="procurement" options={{ href: null }} />
       <Tabs.Screen name="accounts" options={{ href: null }} />

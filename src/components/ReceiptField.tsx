@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Alert, Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { deleteReceiptImage, storeReceiptImage } from '../lib/database';
+import { ArabicAlert as Alert, ArabicText as Text } from './ArabicUI';
 
 export function ReceiptField(props: { uri: string | null; onChange: (uri: string | null) => void }) {
   const [busy, setBusy] = useState(false);

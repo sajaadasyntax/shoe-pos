@@ -1,6 +1,7 @@
 import { Redirect, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput } from '../../components/ArabicUI';
 import { useSQLiteContext } from 'expo-sqlite';
 import { formatAmount, getReportSummary, type ReportSummary } from '../../lib/database';
 import { useAuth } from '../../providers/AuthProvider';

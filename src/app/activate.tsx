@@ -2,15 +2,13 @@ import { Redirect } from 'expo-router';
 import { useState } from 'react';
 import {
   ActivityIndicator,
-  Alert,
   KeyboardAvoidingView,
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
 } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput } from '../components/ArabicUI';
 import { useActivation } from '../providers/ActivationProvider';
 
 export default function ActivationScreen() {

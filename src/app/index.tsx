@@ -1,5 +1,6 @@
 import { Redirect } from 'expo-router';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ArabicText as Text } from '../components/ArabicUI';
 import { useAuth } from '../providers/AuthProvider';
 import { useActivation } from '../providers/ActivationProvider';
 

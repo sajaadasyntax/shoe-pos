@@ -11,6 +11,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput } from '../../components/ArabicUI';
 import { useSQLiteContext } from 'expo-sqlite';
 import { createSalesUser, getUsers, type AppUser } from '../../lib/database';
 import { useAuth } from '../../providers/AuthProvider';

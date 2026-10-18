@@ -5,10 +5,9 @@ import {
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
 } from 'react-native';
+import { ArabicText as Text, ArabicTextInput as TextInput } from '../components/ArabicUI';
 import { useAuth } from '../providers/AuthProvider';
 import { useActivation } from '../providers/ActivationProvider';
 

@@ -9,6 +9,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput, formatArabicDateTime, formatArabicTime } from '../../components/ArabicUI';
 import * as SecureStore from 'expo-secure-store';
 import * as Sharing from 'expo-sharing';
 import { useFocusEffect } from 'expo-router';

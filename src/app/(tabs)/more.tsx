@@ -1,6 +1,7 @@
 import { Link, Redirect } from 'expo-router';
 import { useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ArabicAlert as Alert, ArabicText as Text } from '../../components/ArabicUI';
 import { useSQLiteContext } from 'expo-sqlite';
 import { exportBackup, importBackup } from '../../lib/backup';
 import { useAuth } from '../../providers/AuthProvider';
