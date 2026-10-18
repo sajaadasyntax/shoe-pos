@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "shoe-pos",
+    "name": "سول بوس - نقطة بيع",
     "slug": "shoe-pos",
     "owner": "sajaadammar",
     "version": "1.0.0",
@@ -12,6 +12,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "android": {
+      "supportsRTL": true,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",

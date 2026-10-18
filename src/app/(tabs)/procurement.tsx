@@ -1,14 +1,11 @@
 import { Redirect, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import {
-  Alert,
   KeyboardAvoidingView,
   Modal,
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
 } from 'react-native';
 import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput, formatArabicDateTime } from '../../components/ArabicUI';
@@ -151,7 +148,7 @@ export default function ProcurementScreen() {
             <View style={styles.row}>
               <View style={styles.grow}>
                 <Text style={styles.productName}>{entry.productName} · Size {entry.size}</Text>
-                <Text style={styles.meta}>{entry.supplier} · {new Date(entry.createdAt).toLocaleString()}</Text>
+                <Text style={styles.meta}>{entry.supplier} · {formatArabicDateTime(entry.createdAt)}</Text>
                 <Text style={styles.meta}>{entry.quantity} pairs · {formatAmount(entry.unitCostMinor)} each</Text>
                 <Text style={styles.meta}>Recorded by {entry.createdBy}</Text>
                 <Text style={styles.meta}>{entry.paidMinor === entry.totalMinor ? 'Paid' : `${formatAmount(entry.paidMinor)} paid · ${formatAmount(entry.totalMinor - entry.paidMinor)} unpaid`}</Text>

@@ -1,9 +1,13 @@
 import { Stack } from 'expo-router';
+import { I18nManager } from 'react-native';
 import { SQLiteProvider } from 'expo-sqlite';
 import { StatusBar } from 'expo-status-bar';
 import { initializeDatabase } from '../lib/database';
 import { AuthProvider } from '../providers/AuthProvider';
 import { ActivationProvider } from '../providers/ActivationProvider';
+
+I18nManager.allowRTL(true);
+I18nManager.forceRTL(true);
 
 export default function RootLayout() {
   return (

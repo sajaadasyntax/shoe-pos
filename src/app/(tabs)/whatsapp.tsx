@@ -1,12 +1,9 @@
 import { useCallback, useState } from 'react';
 import {
-  Alert,
   Linking,
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
 } from 'react-native';
 import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput, formatArabicDateTime, formatArabicTime } from '../../components/ArabicUI';

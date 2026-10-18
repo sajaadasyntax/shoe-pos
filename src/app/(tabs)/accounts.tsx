@@ -1,14 +1,11 @@
 import { Redirect, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import {
-  Alert,
   KeyboardAvoidingView,
   Modal,
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
 } from 'react-native';
 import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput, formatArabicDateTime } from '../../components/ArabicUI';
@@ -162,7 +159,7 @@ export default function AccountsScreen() {
               <View style={styles.movementHeading}>
                 <View style={styles.grow}>
                   <Text style={styles.movementName}>{movementLabel(movement.movementType)}</Text>
-                  <Text style={styles.movementMeta}>{movement.accountName} · {new Date(movement.createdAt).toLocaleString()}</Text>
+                  <Text style={styles.movementMeta}>{movement.accountName} · {formatArabicDateTime(movement.createdAt)}</Text>
                 </View>
                 <Text style={[styles.movementAmount, movement.amountMinor < 0 && styles.negative]}>
                   {movement.amountMinor > 0 ? '+' : ''}{formatAmount(movement.amountMinor)}

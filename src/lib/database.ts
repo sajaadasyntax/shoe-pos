@@ -1147,7 +1147,12 @@ function assertAdmin(actor: AppUser): void {
 }
 
 export function parseAmountToMinorUnits(value: string): number | null {
-  const normalized = value.trim();
+  const normalized = value
+    .trim()
+    .replace(/[٠-٩]/g, (digit) => String(digit.charCodeAt(0) - 0x0660))
+    .replace(/[۰-۹]/g, (digit) => String(digit.charCodeAt(0) - 0x06f0))
+    .replace(/٫/g, '.')
+    .replace(/٬/g, '');
   if (!/^\d+(?:\.\d{1,2})?$/.test(normalized)) {
     return null;
   }
@@ -1157,5 +1162,8 @@ export function parseAmountToMinorUnits(value: string): number | null {
 }
 
 export function formatAmount(minor: number): string {
-  return (minor / 100).toFixed(2);
+  return new Intl.NumberFormat('ar', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(minor / 100);
 }

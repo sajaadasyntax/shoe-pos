@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { ArabicAlert as Alert, ArabicText as Text } from '../../components/ArabicUI';
+import { ArabicAlert as Alert, ArabicText as Text, formatArabicDateTime } from '../../components/ArabicUI';
 import { useFocusEffect } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { formatAmount, getSales, type Sale } from '../../lib/database';
@@ -45,7 +45,7 @@ export default function SalesScreen() {
             <View style={styles.saleHeader}>
               <View style={styles.saleHeaderText}>
                 <Text style={styles.saleTotal}>{formatAmount(sale.totalMinor)}</Text>
-                <Text style={styles.saleDate}>{new Date(sale.createdAt).toLocaleString()}</Text>
+                <Text style={styles.saleDate}>{formatArabicDateTime(sale.createdAt)}</Text>
               </View>
               <Text style={styles.paymentMethod}>{sale.accountName ?? sale.paymentMethod.toUpperCase()}</Text>
             </View>

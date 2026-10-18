@@ -122,7 +122,7 @@ export default function ExpensesScreen() {
             <View style={styles.row}>
               <View style={styles.grow}>
                 <Text style={styles.category}>{expense.category}</Text>
-                <Text style={styles.meta}>{new Date(expense.createdAt).toLocaleString()}</Text>
+                <Text style={styles.meta}>{formatArabicDateTime(expense.createdAt)}</Text>
                 {user?.role === 'admin' && <Text style={styles.meta}>Recorded by {expense.userName}</Text>}
               </View>
               <View style={styles.amountBlock}>
