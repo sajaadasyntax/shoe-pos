@@ -1,14 +1,11 @@
 import { useCallback, useState } from 'react';
 import {
-  Alert,
   KeyboardAvoidingView,
   Modal,
   Platform,
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
 } from 'react-native';
 import { ArabicAlert as Alert, ArabicText as Text, ArabicTextInput as TextInput } from '../../components/ArabicUI';
