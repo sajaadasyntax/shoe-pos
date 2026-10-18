@@ -41,6 +41,7 @@ const translations: Record<string, string> = {
   'Your PIN': 'أدخل الرقم السري',
   'Sign in': 'تسجيل الدخول',
   'Signing in…': 'جارٍ تسجيل الدخول…',
+  'Loading…': 'جارٍ التحميل…',
   'Admin name': 'اسم المسؤول',
   'e.g. Store owner': 'مثال: صاحب المتجر',
   'Choose a username': 'اختر اسم مستخدم',
@@ -50,7 +51,6 @@ const translations: Record<string, string> = {
   'The PIN verifier is protected with a device-only key. App access is local to this Android device.': 'تتم حماية التحقق من الرقم السري بمفتاح خاص بالجهاز. يقتصر استخدام التطبيق على جهاز أندرويد هذا.',
   'Create admin account': 'إنشاء حساب المسؤول',
   'Setting up…': 'جارٍ الإعداد…',
-  'DEVICE CHALLENGE (SELECT AND COPY)': 'رمز تحدّي الجهاز (حدده وانسخه)',
   'Device challenge (select and copy)': 'رمز تحدّي الجهاز (حدده وانسخه)',
   'Activation code': 'رمز التفعيل',
   'Paste activation code JSON': 'الصق رمز التفعيل بصيغة JSON',
@@ -79,7 +79,6 @@ const translations: Record<string, string> = {
   'Add each size as its own stock item.': 'أضف كل مقاس كعنصر مخزون مستقل.',
   'Product name': 'اسم المنتج',
   'e.g. Classic Runner': 'مثال: حذاء رياضي كلاسيكي',
-  Size: 'المقاس',
   'e.g. 39': 'مثال: ٣٩',
   'Selling price': 'سعر البيع',
   'Unit cost': 'تكلفة الوحدة',
@@ -124,11 +123,8 @@ const translations: Record<string, string> = {
   'PINs are verified using a salted hash and a secret stored with Android Keystore protection.': 'تُحمى الأرقام السرية باستخدام تجزئة مملّحة وسر محفوظ في مخزن مفاتيح أندرويد.',
   'Create sales user': 'إنشاء مستخدم مبيعات',
   'Add sales users and manage their sign-in accounts': 'أضف مستخدمي المبيعات وأدر حسابات دخولهم',
-  'Procurement': 'المشتريات',
   'Receive purchases and add stock': 'سجّل المشتريات وأضفها إلى المخزون',
-  'Balances': 'الأرصدة',
   'Accounts, opening balances, and transfers': 'الحسابات والأرصدة الافتتاحية والتحويلات',
-  'Reports': 'التقارير',
   'Sales, procurement, and profit and loss': 'المبيعات والمشتريات والأرباح والخسائر',
   'Review and share today’s transactions one by one': 'راجع معاملات اليوم وشاركها واحدة تلو الأخرى',
   'Review and share today&apos;s transactions one by one': 'راجع معاملات اليوم وشاركها واحدة تلو الأخرى',
@@ -139,10 +135,6 @@ const translations: Record<string, string> = {
   'Export includes the local database and receipt images. Backups contain sensitive store and user data; keep them private.': 'يتضمن التصدير قاعدة البيانات المحلية وصور الإيصالات. تحتوي النسخ الاحتياطية على بيانات حساسة للمتجر والمستخدمين؛ احتفظ بها في مكان آمن.',
   'Export backup': 'تصدير نسخة احتياطية',
   'Restore from backup': 'استعادة نسخة احتياطية',
-  'Receive purchases and add stock': 'استلام المشتريات وإضافة المخزون',
-  'Accounts, opening balances, and transfers': 'الحسابات والأرصدة الافتتاحية والتحويلات',
-  'Sales, procurement, and profit and loss': 'المبيعات والمشتريات والأرباح والخسائر',
-  'Add bank account': 'إضافة حساب مصرفي',
   '+ Add bank account': '+ إضافة حساب مصرفي',
   'Add opening balance': 'إضافة رصيد افتتاحي',
   'Record balance correction': 'تسجيل تصحيح للرصيد',
@@ -153,7 +145,6 @@ const translations: Record<string, string> = {
   'Balances are calculated from auditable account movements.': 'تُحسب الأرصدة من حركات الحسابات القابلة للمراجعة.',
   'Opening balance + sales − expenses − paid procurement ± transfers ± corrections': 'الرصيد الافتتاحي + المبيعات − المصروفات − المشتريات المدفوعة ± التحويلات ± التصحيحات',
   'Add a bank account to enable account-to-account transfers.': 'أضف حساباً مصرفياً لتمكين التحويل بين الحسابات.',
-  'Add bank account': 'إضافة حساب مصرفي',
   'Opening balance': 'الرصيد الافتتاحي',
   'Correct account balance': 'تصحيح رصيد الحساب',
   'Transfer funds': 'تحويل الأموال',
@@ -171,8 +162,6 @@ const translations: Record<string, string> = {
   'Transfers are recorded as linked debit and credit entries. The source account must have enough balance.': 'تُسجّل التحويلات كحركتي خصم وإضافة مرتبطتين. يجب أن يتوفر رصيد كافٍ في الحساب المصدر.',
   'Record correction': 'تسجيل التصحيح',
   'Save': 'حفظ',
-  'FINANCIAL LEDGER': 'السجل المالي',
-  'STORE PERFORMANCE': 'أداء المتجر',
   'Sales, procurement, expenses, and estimated profit for this device.': 'المبيعات والمشتريات والمصروفات والأرباح التقديرية لهذا الجهاز.',
   'From (YYYY-MM-DD)': 'من (سنة-شهر-يوم)',
   'To (YYYY-MM-DD)': 'إلى (سنة-شهر-يوم)',
@@ -189,7 +178,6 @@ const translations: Record<string, string> = {
   'Net profit (estimate)': 'صافي الربح (تقديري)',
   'Formula: sales revenue − the captured unit costs of items sold − recorded expenses. Procurement is a stock purchase, not an immediate P&L expense. This report does not yet account for returns, discounts, taxes, unpaid supplier balances, or historical account balances.': 'المعادلة: إيرادات المبيعات − تكلفة وحدات المنتجات المباعة − المصروفات المسجلة. المشتريات شراء للمخزون وليست مصروفاً فورياً في الأرباح والخسائر. لا يشمل التقرير حالياً المرتجعات أو الخصومات أو الضرائب أو أرصدة الموردين غير المدفوعة أو الأرصدة التاريخية للحسابات.',
   'records': 'سجلات',
-  'Daily WhatsApp': 'واتساب اليوم',
   'Today’s sales from all users on this device.': 'مبيعات اليوم لجميع المستخدمين على هذا الجهاز.',
   'Today’s sales from all users on this device. Transactions are prepared one at a time.': 'مبيعات اليوم لجميع المستخدمين على هذا الجهاز. تُجهّز المعاملات واحدة تلو الأخرى.',
   'Your sales for today.': 'مبيعاتك لهذا اليوم.',
@@ -209,6 +197,10 @@ const translations: Record<string, string> = {
   SKIPPED: 'تم التخطي',
   OPENED: 'مفتوحة',
   PENDING: 'قيد الانتظار',
+  cash: 'نقدي',
+  bank: 'مصرفي',
+  CASH: 'نقدي',
+  BANK: 'مصرفي',
   'Opened in WhatsApp; confirm manually after sending.': 'فُتحت في واتساب؛ أكّد الإرسال يدوياً بعد الإرسال.',
   'Receipt image (optional)': 'صورة الإيصال (اختياري)',
   'Saved on this device': 'محفوظة على هذا الجهاز',
@@ -233,12 +225,9 @@ const translations: Record<string, string> = {
   'Could not remove receipt image': 'تعذر حذف صورة الإيصال',
   'Could not sign out': 'تعذر تسجيل الخروج',
   'Could not save procurement': 'تعذر حفظ المشتريات',
-  'Could not update queue': 'تعذر تحديث القائمة',
   'Could not save number': 'تعذر حفظ الرقم',
   'Could not open WhatsApp': 'تعذر فتح واتساب',
   'Could not share receipt': 'تعذرت مشاركة الإيصال',
-  'Could not attach receipt': 'تعذر إرفاق الإيصال',
-  'Could not remove receipt': 'تعذرت إزالة الإيصال',
   'Could not export backup': 'تعذر تصدير النسخة الاحتياطية',
   'Could not restore backup': 'تعذرت استعادة النسخة الاحتياطية',
   'Please try again.': 'يرجى المحاولة مرة أخرى.',
@@ -256,7 +245,6 @@ const translations: Record<string, string> = {
   'WhatsApp opened': 'تم فتح واتساب',
   'Activation failed': 'فشل التفعيل',
   'Could not refresh challenge': 'تعذر تحديث رمز التحدي',
-  'Could not refresh challenge': 'تعذر تحديث رمز التحدي',
   'Could not update queue': 'تعذر تحديث القائمة',
   'Could not save account': 'تعذر حفظ الحساب',
   'The new prices apply to future sales.': 'تُطبّق الأسعار الجديدة على عمليات البيع القادمة.',
@@ -268,7 +256,6 @@ const translations: Record<string, string> = {
   'Enter valid unit cost and paid amount.': 'أدخل تكلفة وحدة ومبلغاً مدفوعاً صالحين.',
   'Select the account used to pay the supplier.': 'اختر الحساب المستخدم لدفع مستحقات المورد.',
   'The purchase record and stock increase were saved together.': 'تم حفظ سجل الشراء وزيادة المخزون معاً.',
-  'Please try again.': 'يرجى المحاولة مرة أخرى.',
   'Sign in required': 'يلزم تسجيل الدخول',
   'Sign in before recording an expense.': 'سجّل الدخول قبل تسجيل مصروف.',
   'Enter a valid amount greater than zero.': 'أدخل مبلغاً صالحاً أكبر من صفر.',
@@ -278,7 +265,6 @@ const translations: Record<string, string> = {
   'Not allowed': 'غير مسموح',
   'Only an admin can add sales users.': 'يمكن للمسؤول فقط إضافة مستخدمي المبيعات.',
   'Choose a product': 'اختر منتجاً',
-  'Check the amount': 'تحقق من المبلغ',
   'Enter a valid amount with up to two decimal places.': 'أدخل مبلغاً صالحاً بمنزلتين عشريتين كحد أقصى.',
   'Choose the account receiving the opening balance.': 'اختر الحساب الذي سيستقبل الرصيد الافتتاحي.',
   'Choose the account to correct.': 'اختر الحساب المطلوب تصحيحه.',
@@ -292,8 +278,6 @@ const translations: Record<string, string> = {
   'No image was selected.': 'لم يتم اختيار صورة.',
   'Choose a receipt image smaller than 8 MB.': 'اختر صورة إيصال يقل حجمها عن ٨ ميغابايت.',
   'The previous image could not be removed:': 'تعذرت إزالة الصورة السابقة:',
-  'Could not attach receipt': 'تعذر إرفاق الإيصال',
-  'Could not remove receipt': 'تعذرت إزالة الإيصال',
   'Working…': 'جارٍ التنفيذ…',
   'Opening photos…': 'جارٍ فتح الصور…',
   'Check WhatsApp number': 'تحقق من رقم واتساب',
@@ -302,7 +286,6 @@ const translations: Record<string, string> = {
   'Enter a valid international WhatsApp number first.': 'أدخل رقم واتساب دولياً صالحاً أولاً.',
   'Check the conversation and tap Send in WhatsApp. This app cannot confirm delivery.': 'تحقق من المحادثة واضغط إرسال في واتساب. لا يستطيع هذا التطبيق تأكيد وصول الرسالة.',
   'Sharing is not available on this device.': 'المشاركة غير متاحة على هذا الجهاز.',
-  'Could not update queue': 'تعذر تحديث قائمة المشاركة',
   'This device is no longer available.': 'لم يعد هذا الجهاز متاحاً.',
   'Only an admin can manage the product catalog or user accounts.': 'يمكن للمسؤول فقط إدارة المنتجات أو حسابات المستخدمين.',
   'Enter an expense category (up to 60 characters).': 'أدخل فئة المصروف (حتى ٦٠ حرفاً).',
@@ -370,6 +353,47 @@ const translations: Record<string, string> = {
   'Backup receipt list does not match the database.': 'قائمة الإيصالات لا تطابق قاعدة البيانات.',
   'Please select an image file.': 'يرجى اختيار ملف صورة.',
   'Could not create the backup file.': 'تعذر إنشاء ملف النسخة الاحتياطية.',
+  SOLEPOS: 'سول بوس',
+  'in stock': 'متوفر',
+  each: 'للوحدة',
+  pairs: 'أزواج',
+  unpaid: 'غير مدفوع',
+  Size: 'المقاس',
+  'Paid from account ·': 'دُفع من الحساب ·',
+  'No procurement recorded': 'لا توجد مشتريات مسجلة',
+  'Received purchases will appear here with their stock movement.': 'ستظهر هنا المشتريات المستلمة مع حركة المخزون المرتبطة بها.',
+  'Receive stock': 'استلام المخزون',
+  'Record supplier purchases and increase stock on hand.': 'سجّل مشتريات المورد وأضفها إلى المخزون المتوفر.',
+  'Record purchase': 'تسجيل عملية شراء',
+  'This milestone records one product size per purchase entry.': 'يسجل هذا النموذج مقاساً واحداً للمنتج في كل عملية شراء.',
+  Supplier: 'المورد',
+  'Supplier name': 'اسم المورد',
+  'Product and size': 'المنتج والمقاس',
+  'Add a product and size in Inventory before recording a purchase.': 'أضف منتجاً ومقاساً في المخزون قبل تسجيل عملية الشراء.',
+  'Quantity received': 'الكمية المستلمة',
+  'Amount paid now (0 for unpaid)': 'المبلغ المدفوع الآن (٠ لغير المدفوع)',
+  'Paid amounts reduce the selected account balance. A zero payment records an unpaid purchase.': 'تُخصم المبالغ المدفوعة من رصيد الحساب المحدد. ويسجّل المبلغ صفر عملية شراء غير مدفوعة.',
+  'Save purchase and stock': 'حفظ الشراء والمخزون',
+  Paid: 'مدفوع',
+  'Sale': 'عملية بيع',
+  'Expense': 'مصروف',
+  'Procurement payment': 'دفعة مشتريات',
+  'Transfer received': 'تحويل وارد',
+  'Transfer sent': 'تحويل صادر',
+  'Balance correction': 'تصحيح الرصيد',
+  'You do not have access to update sharing status for this sale.': 'ليس لديك صلاحية تحديث حالة مشاركة عملية البيع هذه.',
+  'Account history limit must be between 1 and 100.': 'يجب أن يكون حد سجل الحساب بين ١ و١٠٠.',
+  'Backup database has invalid references in its related records.': 'تتضمن قاعدة بيانات النسخة الاحتياطية مراجع غير صالحة في السجلات المرتبطة.',
+  'The activation secret is not configured.': 'لم يتم إعداد سر التفعيل.',
+  'Activation challenge is not ready.': 'رمز تحدي التفعيل غير جاهز.',
+  'Activation response must be the JSON code generated by the offline activation tool.': 'يجب أن يكون رد التفعيل رمز JSON الذي أنشأته أداة التفعيل دون اتصال.',
+  'Activation response is invalid, expired, or belongs to another device challenge.': 'رد التفعيل غير صالح أو منتهي الصلاحية أو خاص بتحدي جهاز آخر.',
+  'Check the activation response.': 'تحقق من رد التفعيل.',
+  'Check that WhatsApp is installed and try again.': 'تحقق من تثبيت واتساب ثم أعد المحاولة.',
+  'Opening…': 'جارٍ الفتح…',
+  '0.00': '٠٫٠٠',
+  '0': '٠',
+  '1': '١',
 };
 
 const errorPatterns: Array<[RegExp, (...matches: string[]) => string]> = [
@@ -388,6 +412,11 @@ const errorPatterns: Array<[RegExp, (...matches: string[]) => string]> = [
   [/^Sell (.+), size (.+)$/, (name, size) => `بيع ${name}، المقاس ${size}`],
   [/^Edit prices for (.+), size (.+)$/, (name, size) => `تعديل أسعار ${name}، المقاس ${size}`],
   [/^The expense will be recorded for (.+)\.$/, (name) => `سيُسجّل هذا المصروف باسم ${name}.`],
+  [/^The activation secret is not configured\. Set (.+) and rebuild the app\.$/, (variable) => `لم يتم إعداد سر التفعيل. اضبط ${variable} ثم أعد بناء التطبيق.`],
+  [/^(.+) must be a 32-byte \(64-character\) hexadecimal value\.$/, (variable) => `يجب أن تكون قيمة ${variable} سداسية عشرية بطول ٦٤ محرفاً (٣٢ بايت).`],
+  [/^A receipt referenced by the database is missing: (.+)$/, (filename) => `ملف الإيصال المشار إليه في قاعدة البيانات غير موجود: ${filename}`],
+  [/^Receipt (.+) is larger than the backup limit\.$/, (filename) => `حجم الإيصال ${filename} يتجاوز حد النسخة الاحتياطية.`],
+  [/^Backup database has invalid references in (.+)\.$/, (table) => `تتضمن قاعدة بيانات النسخة الاحتياطية مراجع غير صالحة في ${table}.`],
 ];
 
 export function arabicText(value: string | undefined): string | undefined {
@@ -402,7 +431,15 @@ export function arabicText(value: string | undefined): string | undefined {
 }
 
 function translateChildren(children: ReactNode): ReactNode {
-  if (typeof children === 'string') return arabicText(children);
+  if (typeof children === 'string') {
+    const content = children.trim();
+    if (!content) return children;
+    const translated = arabicText(content);
+    if (translated === content) return children;
+    const leading = children.match(/^\s*/)?.[0] ?? '';
+    const trailing = children.match(/\s*$/)?.[0] ?? '';
+    return `${leading}${translated}${trailing}`;
+  }
   if (Array.isArray(children)) return children.map(translateChildren);
   return children;
 }
@@ -416,9 +453,24 @@ export function ArabicText(props: TextProps) {
 }
 
 export function ArabicTextInput(props: TextInputProps) {
+  const numericKeyboard = ['decimal-pad', 'numeric', 'number-pad', 'phone-pad'].includes(props.keyboardType ?? '');
   return (
     <NativeTextInput
       {...props}
+      style={[
+        {
+          writingDirection: numericKeyboard ? 'ltr' : 'rtl',
+          textAlign: numericKeyboard ? 'left' : 'right',
+        },
+        props.style,
+      ]}
+      onChangeText={props.onChangeText ? (text) => props.onChangeText?.(
+        text.replace(/[٠-٩]/g, (digit) => String(digit.charCodeAt(0) - 0x0660))
+          .replace(/[۰-۹]/g, (digit) => String(digit.charCodeAt(0) - 0x06f0))
+          .replace(/٫/g, '.')
+          .replace(/٬/g, '')
+          .replace(/[−﹣－]/g, '-'),
+      ) : undefined}
       placeholder={arabicText(props.placeholder)}
       accessibilityLabel={arabicText(props.accessibilityLabel)}
     />

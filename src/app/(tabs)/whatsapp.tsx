@@ -17,15 +17,15 @@ import { useAuth } from '../../providers/AuthProvider';
 const WHATSAPP_NUMBER_KEY = 'solepos.whatsapp-number';
 
 function messageFor(sale: Sale): string {
-  const time = new Date(sale.createdAt).toLocaleString();
+  const time = formatArabicDateTime(sale.createdAt);
   return [
-    `Shoe store sale ${sale.id.slice(0, 8)}`,
-    `Time: ${time}`,
-    `Items: ${sale.items}`,
-    `Total: ${formatAmount(sale.totalMinor)}`,
-    `Payment: ${sale.accountName ?? sale.paymentMethod}`,
-    `Sales user: ${sale.sellerName}`,
-    sale.receiptUri ? 'Bank receipt: attached separately' : 'Bank receipt: none attached',
+    `عملية بيع من متجر الأحذية ${sale.id.slice(0, 8)}`,
+    `الوقت: ${time}`,
+    `المنتجات: ${sale.items}`,
+    `الإجمالي: ${formatAmount(sale.totalMinor)}`,
+    `طريقة الدفع: ${sale.accountName ?? (sale.paymentMethod === 'cash' ? 'نقدي' : 'مصرفي')}`,
+    `موظف المبيعات: ${sale.sellerName}`,
+    sale.receiptUri ? 'إيصال البنك: مرفق بشكل منفصل' : 'إيصال البنك: غير مرفق',
   ].join('\n');
 }
 
@@ -176,7 +176,7 @@ export default function WhatsAppScreen() {
           <View style={styles.saleHeader}>
             <View style={styles.grow}>
               <Text style={styles.saleName}>{sale.sellerName} · {formatAmount(sale.totalMinor)}</Text>
-              <Text style={styles.meta}>{new Date(sale.createdAt).toLocaleTimeString()} · {sale.accountName ?? sale.paymentMethod}</Text>
+              <Text style={styles.meta}>{formatArabicTime(sale.createdAt)} · {sale.accountName ?? sale.paymentMethod}</Text>
             </View>
             <Text style={[styles.status, sale.shareStatus === 'confirmed' && styles.confirmed]}>
               {sale.shareStatus === 'confirmed' ? 'DONE' : sale.shareStatus === 'skipped' ? 'SKIPPED' : sale.shareStatus === 'opened' ? 'OPENED' : 'PENDING'}
