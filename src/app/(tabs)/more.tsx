@@ -49,6 +49,16 @@ export default function MoreScreen() {
       <Text style={styles.title}>More</Text>
       <Text style={styles.subtitle}>{user.name} · {user.role === 'admin' ? 'Admin' : 'Sales user'}</Text>
 
+      {user.role === 'admin' && (
+        <Link href="/(tabs)/users" style={styles.link}>
+          <View style={styles.linkBody}>
+            <Text style={styles.linkTitle}>User management</Text>
+            <Text style={styles.linkDescription}>Add sales users and manage their sign-in accounts</Text>
+          </View>
+          <Text style={styles.arrow}>›</Text>
+        </Link>
+      )}
+
       <Link href="/(tabs)/expenses" style={styles.link}>
         <View style={styles.linkBody}>
           <Text style={styles.linkTitle}>Expenses</Text>
@@ -80,13 +90,6 @@ export default function MoreScreen() {
             <View style={styles.linkBody}>
               <Text style={styles.linkTitle}>Procurement</Text>
               <Text style={styles.linkDescription}>Receive purchases and add stock</Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </Link>
-          <Link href="/(tabs)/users" style={styles.link}>
-            <View style={styles.linkBody}>
-              <Text style={styles.linkTitle}>Users</Text>
-              <Text style={styles.linkDescription}>Create sales-user accounts</Text>
             </View>
             <Text style={styles.arrow}>›</Text>
           </Link>

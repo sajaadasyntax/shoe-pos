@@ -1,6 +1,17 @@
 import { Redirect, Tabs } from 'expo-router';
+import { Text } from 'react-native';
 import { useAuth } from '../../providers/AuthProvider';
 import { useActivation } from '../../providers/ActivationProvider';
+
+function tabLabel(label: string) {
+  return function TabBarLabel({ focused }: { focused: boolean }) {
+    return (
+      <Text style={{ color: focused ? '#1d6b58' : '#52635b', fontSize: 12, fontWeight: focused ? '800' : '600' }}>
+        {label}
+      </Text>
+    );
+  };
+}
 
 export default function TabLayout() {
   const { status, user } = useAuth();
@@ -12,26 +23,34 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#1d6b58',
-        tabBarInactiveTintColor: '#66736e',
-        tabBarLabelStyle: { fontSize: 11, fontWeight: '600' },
-        tabBarStyle: { height: 64, paddingBottom: 8, paddingTop: 6 },
+        tabBarIcon: () => null,
+        tabBarActiveBackgroundColor: '#edf5f1',
+        tabBarInactiveBackgroundColor: '#fff',
+        tabBarStyle: {
+          height: 70,
+          paddingBottom: 8,
+          paddingTop: 8,
+          backgroundColor: '#fff',
+          borderTopColor: '#cbd8d0',
+          borderTopWidth: 1,
+          elevation: 10,
+        },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Inventory', tabBarLabel: 'Inventory' }} />
-      <Tabs.Screen name="sales" options={{ title: 'Sales', tabBarLabel: 'Sales' }} />
-      <Tabs.Screen name="expenses" options={{ title: 'Expenses', tabBarLabel: 'Expenses' }} />
+      <Tabs.Screen name="index" options={{ title: 'Inventory', tabBarLabel: tabLabel('Inventory') }} />
+      <Tabs.Screen name="sales" options={{ title: 'Sales', tabBarLabel: tabLabel('Sales') }} />
+      <Tabs.Screen name="expenses" options={{ title: 'Expenses', tabBarLabel: tabLabel('Expenses') }} />
       <Tabs.Screen
-        name="reports"
+        name="users"
         options={{
-          title: 'Reports',
-          tabBarLabel: 'Reports',
+          title: 'User management',
+          tabBarLabel: tabLabel('Users'),
           href: user?.role === 'admin' ? undefined : null,
         }}
       />
-      <Tabs.Screen name="more" options={{ title: 'More', tabBarLabel: 'More' }} />
+      <Tabs.Screen name="more" options={{ title: 'More', tabBarLabel: tabLabel('More') }} />
+      <Tabs.Screen name="reports" options={{ href: null }} />
       <Tabs.Screen name="procurement" options={{ href: null }} />
-      <Tabs.Screen name="users" options={{ href: null }} />
       <Tabs.Screen name="accounts" options={{ href: null }} />
       <Tabs.Screen name="whatsapp" options={{ href: null }} />
     </Tabs>
