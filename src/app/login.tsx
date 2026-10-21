@@ -1,4 +1,4 @@
-import { Redirect } from 'expo-router';
+import { Link, Redirect } from 'expo-router';
 import { useState } from 'react';
 import {
   KeyboardAvoidingView,
@@ -55,6 +55,11 @@ export default function LoginScreen() {
         <Pressable style={[styles.button, checking && styles.disabled]} disabled={checking} onPress={submit}>
           <Text style={styles.buttonText}>{checking ? 'Signing in…' : 'Sign in'}</Text>
         </Pressable>
+        <Link href="/cloud" asChild>
+          <Pressable style={styles.cloudLink}>
+            <Text style={styles.cloudLinkText}>إعداد متجر سحابي أو تسجيل الدخول إليه</Text>
+          </Pressable>
+        </Link>
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -72,5 +77,7 @@ const styles = StyleSheet.create({
   error: { marginTop: 14, color: '#9c2f2f', fontSize: 13 },
   button: { marginTop: 24, backgroundColor: '#1d6b58', padding: 15, borderRadius: 12, alignItems: 'center' },
   buttonText: { color: '#fff', fontSize: 15, fontWeight: '700' },
+  cloudLink: { marginTop: 12, padding: 13, alignItems: 'center' },
+  cloudLinkText: { color: '#1d6b58', fontSize: 14, fontWeight: '700' },
   disabled: { opacity: 0.65 },
 });

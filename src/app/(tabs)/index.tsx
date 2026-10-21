@@ -26,6 +26,10 @@ import {
 } from '../../lib/database';
 import { useAuth } from '../../providers/AuthProvider';
 
+function amountInputValue(minor: number): string {
+  return `${Math.floor(minor / 100)}.${String(minor % 100).padStart(2, '0')}`;
+}
+
 export default function InventoryScreen() {
   const db = useSQLiteContext();
   const { user, signOut } = useAuth();
@@ -81,8 +85,8 @@ export default function InventoryScreen() {
   const openPriceEditor = (product: Product) => {
     setName(product.name);
     setSize(product.size);
-    setPrice(formatAmount(product.priceMinor));
-    setCost(formatAmount(product.costMinor));
+    setPrice(amountInputValue(product.priceMinor));
+    setCost(amountInputValue(product.costMinor));
     setOpeningStock('');
     setEditingProduct(product);
   };
